@@ -1,0 +1,69 @@
+/* 전체 레이아웃 스타일링 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+/* 다이어리 목록 테이블 스타일링 */
+.diary-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.diary-table th, .diary-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.diary-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.diary-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.diary-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* 버튼 스타일링 */
+.create-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.create-button:hover {
+    background-color: #45a049;
+}

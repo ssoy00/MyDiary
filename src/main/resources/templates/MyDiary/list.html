@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/static/css/list.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary List</title>
+</head>
+<body>
+<header>
+    <h1>My Diary</h1>
+</header>
+
+<div class="container">
+    <h2>Diary Entries</h2>
+
+    <!-- 다이어리 목록 테이블 -->
+    <table class="diary-table">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="diary : ${diaries}">
+            <td th:text="${diary.title}">Title</td>
+            <td th:text="${diary.content}">Content</td>
+            <td th:text="${diary.getDate()}">Date</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- 버튼을 추가하여 다이어리 작성 페이지로 이동할 수 있습니다 -->
+    <a href="/create" class="create-button">Add New Entry</a>
+</div>
+</body>
+</html>
