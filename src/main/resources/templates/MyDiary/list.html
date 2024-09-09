@@ -30,12 +30,14 @@
             <td th:text="${diary.title}">Title</td>
             <td th:text="${diary.content}">Content</td>
             <td th:text="${diary.getDate()}">Date</td>
+            <td>
+                <a th:href="@{/MyDiary/read(id=${diary.id})}" class="detail-button">Detail</a>
+            </td>
         </tr>
         </tbody>
     </table>
 
-    <!-- 버튼을 추가하여 다이어리 작성 페이지로 이동할 수 있습니다 -->
-    <a href="/create" class="create-button">Add New Entry</a>
+    <a href="/MyDiary/create" class="create-button">Add New Entry</a>
 </div>
 </body>
 </html>

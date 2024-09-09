@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary Entry Details</title>
+    <link rel="stylesheet" href="/static/css/read.css">
+    <script defer src="/static/js/delete.js"></script>
+</head>
+<body>
+<header>
+    <h1>Diary Entry Details</h1>
+</header>
+
+<div class="container">
+    <h2>Diary Details</h2>
+
+    <div class="diary-details">
+        <label>Title:</label>
+        <p th:text="${diary.title}">Sample Title</p>
+    </div>
+
+    <div class="diary-details">
+        <label>Content:</label>
+        <p th:text="${diary.content}">This is the content of the diary entry.</p>
+    </div>
+
+    <div class="diary-details">
+        <label>Date:</label>
+        <p th:text="${diary.date}">2024-09-09</p>
+    </div>
+
+
+    <a href="/MyDiary/list" class="back-button">Back to List</a>
+    <a th:href="@{/MyDiary/update(id=${diary.id})}" class="update-button">update</a>
+    <button type="button" th:data-id="${diary.id}" class="delete-button">Delete</button>
+
+</div>
+</body>
+</html>

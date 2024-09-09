@@ -8,6 +8,9 @@ import java.util.List;
 public interface DiaryService {
     DiaryDTO addDiary(DiaryDTO diaryDTO);
     List<DiaryDTO> getAllDiary();
+    DiaryDTO getDiaryById(Long id);
+    void updateDiary(DiaryDTO diaryDTO);
+    void deleteDiary(Long id);
 
     default DiaryDTO entityToDTO(Diary diary) {
         DiaryDTO diaryDTO = DiaryDTO.builder()
